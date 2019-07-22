@@ -1,9 +1,9 @@
-# react-native-safe-module
+# react-native-safe-modules
 
 A safe way to consume React Native NativeModules
 
 
-[![npm Version](https://img.shields.io/npm/v/react-native-safe-module.svg)](https://www.npmjs.com/package/react-native-safe-module) [![License](https://img.shields.io/npm/l/react-native-safe-module.svg)](https://www.npmjs.com/package/react-native-safe-module) [![Build Status](https://travis-ci.org/lelandrichardson/react-native-safe-module.svg)](https://travis-ci.org/airbnb/react-native-safe-module)
+[![npm Version](https://img.shields.io/npm/v/react-native-safe-modules.svg)](https://www.npmjs.com/package/react-native-safe-modules) [![License](https://img.shields.io/npm/l/react-native-safe-modules.svg)](https://www.npmjs.com/package/react-native-safe-modules) [![Build Status](https://travis-ci.org/lelandrichardson/react-native-safe-modules.svg)](https://travis-ci.org/airbnb/react-native-safe-modules)
 
 
 ## Motivation
@@ -32,7 +32,7 @@ a host app (e.g, Node).
 ## Installation
 
 ```bash
-npm i --save react-native-safe-module
+npm i --save react-native-safe-modules
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ npm i --save react-native-safe-module
 Importing `SafeModule` is as simple as:
 
 ```js
-import SafeModule from 'react-native-safe-module';
+import SafeModule from 'react-native-safe-modules';
 ```
 
 ### Basic Usage
@@ -61,7 +61,7 @@ FooModule.doSomething().then(...)
 You can instead do:
 
 ```js
-import SafeModule from 'react-native-safe-module';
+import SafeModule from 'react-native-safe-modules';
 const FooModule = SafeModule.create({
   moduleName: 'FooModule',
   mock: {
@@ -99,7 +99,7 @@ This is a breaking change, but we can make it backwards compatible with SafeModu
 
 ```js
 // Scrolling.js
-import SafeModule from 'react-native-safe-module';
+import SafeModule from 'react-native-safe-modules';
 
 module.exports = SafeModule.create({
   moduleName: 'MyCustomScrollingModule',
@@ -132,7 +132,7 @@ and we want to change the name of it to be just `FooModule`.
 
 ```js
 // FooModule.js
-import SafeModule from 'react-native-safe-module';
+import SafeModule from 'react-native-safe-modules';
 
 module.exports = SafeModule.create({
   moduleName: ['FooModule', 'FooExperimentalModule'],
