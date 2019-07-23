@@ -3,7 +3,7 @@
 A safe way to consume React Native NativeModules
 
 
-[![npm Version](https://img.shields.io/npm/v/react-native-safe-modules.svg)](https://www.npmjs.com/package/react-native-safe-modules) [![License](https://img.shields.io/npm/l/react-native-safe-modules.svg)](https://www.npmjs.com/package/react-native-safe-modules) [![Build Status](https://travis-ci.org/lelandrichardson/react-native-safe-modules.svg)](https://travis-ci.org/airbnb/react-native-safe-modules)
+[![npm Version](https://img.shields.io/npm/v/react-native-safe-modules.svg)](https://www.npmjs.com/package/react-native-safe-modules) [![License](https://img.shields.io/npm/l/react-native-safe-modules.svg)](https://www.npmjs.com/package/react-native-safe-modules)
 
 
 ## Motivation
