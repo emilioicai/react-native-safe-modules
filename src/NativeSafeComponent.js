@@ -21,7 +21,7 @@ const first = (array, fn) => {
 const getViewManagerConfig = (moduleName) => {
   if (UIManager.getViewManagerConfig) {
     // RN >= 0.58
-    return UIManager.getViewManagerConfig(moduleName)
+    return UIManager.getViewManagerConfig(moduleName);
   }
 
   // RN < 0.58
@@ -117,13 +117,15 @@ function SafeComponentCreate(options) {
   let result = nativeComponent;
 
   result.runCommand = (instance, name, ...args) => {
+    const native = () => UIManager.dispatchViewManagerCommand(
+      findNodeHandle(instance),
+      getViewManagerConfig(realViewName).Commands[name],
+      args
+    );
     return Platform.select({
-      android: () => UIManager.dispatchViewManagerCommand(
-        findNodeHandle(instance),
-        getViewManagerConfig(realViewName).Commands[name],
-        args
-      ),
+      android: native,
       ios: () => nativeModule[name](findNodeHandle(instance), ...args),
+      windows: native,
       default: () => {},
     })();
   };
@@ -133,6 +135,7 @@ function SafeComponentCreate(options) {
     Platform.select({
       ios: native,
       android: native,
+      windows: native,
       default: () => {},
     })();
   };
