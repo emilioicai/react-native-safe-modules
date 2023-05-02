@@ -1,6 +1,6 @@
 {
   "name": "react-native-safe-modules",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A safe way to consume React Native NativeModules (forked from react-native-safe-module by @emilioicai)",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emilioicai/react-native-safe-modules.git"
+    "url": "git+https://github.com/tomvankruijsbergen/react-native-safe-modules.git"
   },
   "keywords": [
     "react-native",
@@ -22,12 +22,12 @@
     "native-modules",
     "code-push"
   ],
-  "author": "Emilio Rodriguez <emiliorodriguez@gmail.com>",
+  "author": "Tom van Kruijsbergen <tom.v.kruijsbergen@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emilioicai/react-native-safe-modules/issues"
+    "url": "https://github.com/tomvankruijsbergen/react-native-safe-modules/issues"
   },
-  "homepage": "https://github.com/emilioicai/react-native-safe-modules#readme",
+  "homepage": "https://github.com/tomvankruijsbergen/react-native-safe-modules#readme",
   "peerDependencies": {
     "react-native": "*"
   },
@@ -39,7 +39,7 @@
     "babel-core": "^6.14.0",
     "babel-preset-react-native": "^1.9.0",
     "chai": "^3.5.0",
-    "eslint": "^4.18.2",
+    "eslint": "^3.6.0",
     "eslint-config-airbnb": "^11.0.0",
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.2.1",
