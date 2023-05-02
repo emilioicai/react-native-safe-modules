@@ -1,10 +1,10 @@
 {
   "name": "react-native-safe-modules",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A safe way to consume React Native NativeModules (forked from react-native-safe-module by @emilioicai)",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "npm run --silent build",
+    "postinstall": "npm run --silent build",
     "build": "rm -rf lib && babel -d lib src",
     "lint": "eslint ./src ./test",
     "test": "npm run --silent lint && npm run --silent test:all",
