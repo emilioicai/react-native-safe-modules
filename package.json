@@ -1,7 +1,7 @@
 {
   "name": "react-native-safe-modules",
-  "version": "1.0.0",
-  "description": "A safe way to consume React Native NativeModules (forked from react-native-safe-module by @lelandrichardson)",
+  "version": "1.0.1",
+  "description": "A safe way to consume React Native NativeModules (forked from react-native-safe-module by @emilioicai)",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run --silent build",
