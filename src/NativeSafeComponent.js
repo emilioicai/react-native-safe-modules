@@ -116,29 +116,31 @@ function SafeComponentCreate(options) {
 
   let result = nativeComponent;
 
-  result.runCommand = (instance, name, ...args) => {
-    const native = () => UIManager.dispatchViewManagerCommand(
-      findNodeHandle(instance),
-      getViewManagerConfig(realViewName).Commands[name],
-      args
-    );
-    return Platform.select({
-      android: native,
-      ios: () => nativeModule[name](findNodeHandle(instance), ...args),
-      windows: native,
-      default: () => {},
-    })();
-  };
+  if (typeof result === 'object') {
+    result.runCommand = (instance, name, ...args) => {
+      const native = () => UIManager.dispatchViewManagerCommand(
+          findNodeHandle(instance),
+          getViewManagerConfig(realViewName).Commands[name],
+          args
+      );
+      return Platform.select({
+        android: native,
+        ios: () => nativeModule[name](findNodeHandle(instance), ...args),
+        windows: native,
+        default: () => {},
+      })();
+    };
 
-  result.updateView = (instance, props) => {
-    const native = () => UIManager.updateView(findNodeHandle(instance), realViewName, props);
-    Platform.select({
-      ios: native,
-      android: native,
-      windows: native,
-      default: () => {},
-    })();
-  };
+    result.updateView = (instance, props) => {
+      const native = () => UIManager.updateView(findNodeHandle(instance), realViewName, props);
+      Platform.select({
+        ios: native,
+        android: native,
+        windows: native,
+        default: () => {},
+      })();
+    };
+  }
 
   if (componentOverrides) {
     const overrides = componentOverrides[version];
